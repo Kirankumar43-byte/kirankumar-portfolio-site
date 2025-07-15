@@ -1,6 +1,7 @@
 import { ArrowRight, Download, Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import kiranProfile from '@/assets/kiran-profile.jpg';
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -85,21 +86,21 @@ const Hero = () => {
 
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end">
-            <Card className="p-8 card-shadow-hover transition-smooth">
+            <Card className="p-6 card-shadow-hover transition-smooth">
               <div className="relative">
-                <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <div className="w-72 h-72 rounded-xl bg-muted flex items-center justify-center text-muted-foreground">
-                    <div className="text-center space-y-2">
-                      <div className="w-24 h-24 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
-                        <span className="text-2xl font-bold text-primary">KM</span>
-                      </div>
-                      <p className="text-sm">Professional Photo</p>
-                    </div>
+                <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 p-4 flex items-center justify-center">
+                  <div className="w-72 h-72 rounded-xl overflow-hidden bg-card border-2 border-primary/20">
+                    <img 
+                      src={kiranProfile} 
+                      alt="Kiran Kumar M - Professional Profile"
+                      className="w-full h-full object-cover object-center"
+                    />
                   </div>
                 </div>
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full opacity-80"></div>
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent rounded-full opacity-60"></div>
+                <div className="absolute top-4 -left-4 w-4 h-4 bg-primary/60 rounded-full opacity-70"></div>
               </div>
             </Card>
           </div>
